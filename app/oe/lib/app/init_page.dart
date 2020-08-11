@@ -11,11 +11,11 @@ class InitPage extends StatelessWidget {
     return MaterialApp(
       navigatorKey: GlobalKey(debugLabel: "oe_app_global_key"),
       title: 'OnlineEducation',
-      showPerformanceOverlay: false, //显示性能标签
+      showPerformanceOverlay: false,
       debugShowCheckedModeBanner: false,
       checkerboardRasterCacheImages: false,
       checkerboardOffscreenLayers: false,
-      showSemanticsDebugger: false, // 显示语义视图
+      showSemanticsDebugger: false,
       onGenerateRoute: Application.router.generator,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -25,7 +25,7 @@ class InitPage extends StatelessWidget {
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate
       ],
       supportedLocales: const [
         Locale('zh', 'CH'),
@@ -33,7 +33,8 @@ class InitPage extends StatelessWidget {
       ],
       builder: (context, child) {
         return MediaQuery(
-          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0), // 或者 MediaQueryData.fromWindow(WidgetsBinding.instance.window).copyWith(textScaleFactor: 1.0),
+          // MediaQueryData.fromWindow(WidgetsBinding.instance.window).copyWith(textScaleFactor: 1.0)
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
           child: child,
         );
       },
