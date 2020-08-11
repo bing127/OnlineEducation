@@ -7,6 +7,7 @@ class InitPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       navigatorKey: GlobalKey(debugLabel: "oe_app_global_key"),
       title: 'OnlineEducation',
